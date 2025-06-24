@@ -1,6 +1,24 @@
 [package]
+name = "broker_server"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+rust-version = { workspace = true }
+
+# Define both binary and library targets
+[lib]
+name = "broker_server"
+path = "src/lib.rs"
+
+[[bin]]
 name = "broker-server"
-version = "0.1.0"
-edition = "2021"
+path = "src/main.rs"
 
 [dependencies]
+tokio = {workspace = true}
+tracing = "0.1"
+anyhow = "1.0.98"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+serde = { version = "1.0.219", features = ["derive"] }
+clap = { version = "4.5.40", features = ["derive"] }
+client-sdk = { path = "../client-sdk" }  # local path within workspace

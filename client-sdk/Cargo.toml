@@ -1,6 +1,14 @@
 [package]
 name = "client-sdk"
-version = "0.1.0"
-edition = "2021"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+rust-version = { workspace = true }
+
+[lib]
+name = "client_sdk"
+path = "src/lib.rs"
 
 [dependencies]
+tokio = { workspace = true }
+anyhow = "1.0.98"
