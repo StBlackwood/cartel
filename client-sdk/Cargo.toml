@@ -12,3 +12,5 @@ path = "src/lib.rs"
 [dependencies]
 tokio = { workspace = true }
 anyhow = "1.0.98"
+common = { path = "../common" }
+bincode = { workspace = true }

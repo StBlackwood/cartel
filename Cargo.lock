@@ -104,6 +104,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "bincode"
+version = "1.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b1f45e9417d87227c7a56d22e471c6206462cba514c7590c09aff4cf6d1ddcad"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "bitflags"
 version = "2.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -114,8 +123,10 @@ name = "broker_server"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "bincode",
  "clap",
  "client-sdk",
+ "common",
  "serde",
  "tokio",
  "tracing",
@@ -179,6 +190,8 @@ name = "client-sdk"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "bincode",
+ "common",
  "tokio",
 ]
 
@@ -191,6 +204,9 @@ checksum = "b05b61dc5112cbb17e4b6cd61790d9845d13888356391624cbe7e41efeac1e75"
 [[package]]
 name = "common"
 version = "0.1.0"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "gimli"

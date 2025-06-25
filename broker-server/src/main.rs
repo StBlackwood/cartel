@@ -4,6 +4,8 @@ mod opts;
 mod server;
 mod tests;
 
+mod consumer;
+
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     use clap::Parser;
