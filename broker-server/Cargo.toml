@@ -1,5 +1,5 @@
 [package]
-name = "broker_server"
+name = "broker-server"
 version = { workspace = true }
 edition = { workspace = true }
 publish = { workspace = true }

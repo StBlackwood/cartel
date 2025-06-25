@@ -20,7 +20,7 @@ cargo run -p broker-server -- --host 127.0.0.1 --port 9082 --verbose 2
 ### 2. Run Tests
 
 ```bash
-cargo test -p broker-server
+cargo test
 ```
 
 ## Dependencies
