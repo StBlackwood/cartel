@@ -1,8 +1,8 @@
-﻿use broker_server::opts::Opts;
-use broker_server::server;
-use client_sdk::connect_and_read;
+﻿use client_sdk::connect_and_read;
 use std::time::Duration;
 use tokio::time::sleep;
+use crate::opts::Opts;
+use crate::server::server;
 
 const TEST_SERVER_ADDR: &str = "127.0.0.1";
 const TEST_SERVER_PORT: u16 = 9082;

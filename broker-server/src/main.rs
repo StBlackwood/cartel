@@ -1,6 +1,5 @@
 use crate::opts::Opts;
 
-mod connection;
 mod opts;
 mod server;
 mod tests;
@@ -12,5 +11,5 @@ async fn main() -> anyhow::Result<()> {
 
     opts.configure_logging();
 
-    server::run(&opts).await
+    server::server::run(&opts).await
 }

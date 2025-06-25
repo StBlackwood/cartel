@@ -1,7 +1,7 @@
-﻿use crate::connection::handle_connection;
-use crate::opts::Opts;
-use tokio::net::TcpListener;
+﻿use tokio::net::TcpListener;
 use tracing::{info};
+use crate::opts::Opts;
+use crate::server::connection::handle_connection;
 
 pub async fn run(opts: &Opts) -> anyhow::Result<()> {
     let addr = format!("{}:{}", opts.host, opts.port);
