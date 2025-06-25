@@ -1,9 +1,9 @@
-﻿use crate::opts::Opts;
-use crate::server::server;
-use client_sdk::client::Client;
+﻿use client_sdk::client::Client;
 use common::protocol::ClientRole;
 use std::time::Duration;
 use tokio::time::sleep;
+use broker_server::opts::Opts;
+use broker_server::server;
 
 const TEST_SERVER_ADDR: &str = "127.0.0.1";
 const TEST_SERVER_PORT: u16 = 9082;
@@ -16,7 +16,7 @@ async fn start_test_server() {
     };
 
     tokio::spawn(async move {
-        let _ = server::run(&opts).await;
+        let _ = server::server::run(&opts).await;
     });
 
     sleep(Duration::from_millis(200)).await;

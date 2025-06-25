@@ -1,10 +1,5 @@
-use crate::opts::Opts;
-
-mod opts;
-mod server;
-mod tests;
-
-mod consumer;
+use broker_server::opts::Opts;
+use broker_server::server;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
